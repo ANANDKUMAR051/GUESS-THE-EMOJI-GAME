@@ -1,0 +1,2 @@
+const u=JSON.parse(localStorage.getItem("user")||"null");if(!u)location.href="login.html";
+fetch(`/api/achievements/${u.id}`).then(r=>r.json()).then(data=>{document.getElementById("achievements").innerHTML=data.map(a=>`<article class="achievement ${a.unlocked?"":"locked"}"><div class="icon">${a.icon}</div><h3>${a.name}</h3><p>${a.description}</p><span class="state">${a.unlocked?"✅ Unlocked":"🔒 Locked"}</span></article>`).join("")})

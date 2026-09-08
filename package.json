@@ -1,0 +1,22 @@
+{
+  "name": "guess-the-emoji",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack Guess the Emoji game with authentication, leaderboard, achievements, shop and Socket.io multiplayer.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "cross-env NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0"
+  }
+}
